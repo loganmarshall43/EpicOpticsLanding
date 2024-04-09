@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Epic Optics</title>
+    <link rel="icon" href="image\favicon.jpg" type="image/jpg">
+    <style>
+        body, html {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+        }
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .welcome {
+            display: flex;
+            justify-content: center; /* Horizontally centers the content */
+            align-items: center; /* Vertically centers the content (if you decide to set a specific height for .welcome) */
+            width: 100%; /* Ensures the div takes the full width of its container */
+            margin: 20px 0; /* Adds some space above and below the logo */
+        }
+        .welcome img {
+            max-width: 50%;
+        }
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            max-width: 80%;
+        }
+        .card {
+            position: relative;
+            text-align: center;
+            margin: 20px;
+            border-radius: 8px; /* Optional: Adds rounded corners to the card */
+            overflow: hidden; /* Ensures the content fits within the borders */
+            max-width: 500px;
+        }
+        .link-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .link-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        .link-item h2 {
+            position: absolute;
+            margin: 0;
+            color: white; /* Ensure the text is visible against your images */
+            background-color: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent overlay to improve readability */
+            padding: 5px 10px;
+            border-radius: 5px; /* Optional: Rounds the corners of the overlay */
+        }
+        .link-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .link-item h2 {
+            position: absolute;
+            top: 50%; /* Center the title vertically */
+            left: 50%; /* Center the title horizontally */
+            transform: translate(-50%, -50%); /* Adjust the positioning to truly center regardless of the h2 size */
+            margin: 0;
+            color: white;
+            background-color: black;
+            padding: 5px 10px;
+            border-radius: 5px;
+            z-index: 10; /* Ensure the title is above the image */
+        }
+        
+        /* Optional: Add a subtle effect to the title on image hover */
+        .link-item:hover h2 {
+            background-color: rgba(0, 0, 0, 0.7); /* Slightly darken the title background on hover */
+        }
+        @media (max-width: 1500px) {
+            .welcome {
+                padding-top: 40px;
+            }
+            .welcome img{
+                max-width: 90%;
+            }
+            .card-container {
+                flex-direction: column;
+            }
+            .card {
+                max-width: 100%;
+            }
+
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+    <div class="welcome">
+        <img src="image/OpticsOfficialBrands-W.png" alt="Epic Optics Logo">
+    </div>
+
+    <div class="card-container">
+        <div class="card">
+            <div class="link-item">
+                <h2>Birding</h2>
+                <a href="https://www.epicbirding.com/">
+                    <img src="image/bird1.jpg" alt="Birding">
+                </a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="link-item">
+                <h2>Hunting</h2>
+                <a href="https://store.epicoutdoors.com/">
+                    <img src="image/deer1.jpg" alt="Hunting">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
